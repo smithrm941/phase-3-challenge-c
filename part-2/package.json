@@ -1,0 +1,24 @@
+{
+  "name": "part-1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/smithrm941/phase-3-challenge-c.git"
+  },
+  "author": "Rhonda Smith",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/smithrm941/phase-3-challenge-c/issues"
+  },
+  "homepage": "https://github.com/smithrm941/phase-3-challenge-c#readme",
+  "dependencies": {
+    "chai": "^4.1.1",
+    "mocha": "^3.5.0",
+    "pg-promise": "^6.3.8"
+  }
+}
