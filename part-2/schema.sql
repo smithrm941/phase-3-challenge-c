@@ -6,7 +6,7 @@ CREATE DATABASE hotel_db;
 CREATE TABLE guest (
   id SERIAL PRIMARY KEY,
   name VARCHAR(255),
-  email VARCHAR(255)
+  email TEXT
 );
 
 CREATE TABLE room (

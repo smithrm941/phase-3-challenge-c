@@ -5,7 +5,8 @@
   "main": "app.js",
   "scripts": {
     "test": "mocha",
-    "start": "psql < schema.sql"
+    "start": "psql < schema.sql",
+    "run": "psql < load-data.sql"
   },
   "repository": {
     "type": "git",
