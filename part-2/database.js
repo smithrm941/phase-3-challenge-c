@@ -24,7 +24,8 @@ const listUpcomingBookings = () => {return db.any(
   FROM room, guest, booking
   WHERE room.id = booking.room_id
   AND guest.id = booking.guest_id
-  AND booking.check_out > CURRENT_DATE;`
+  AND booking.check_out > CURRENT_DATE
+  ORDER BY check_in;`
 )}
 
 const listBookingsForRoom = (room) => {return db.any (
@@ -33,7 +34,8 @@ const listBookingsForRoom = (room) => {return db.any (
   WHERE room.room_number = $1
   AND room.id = booking.room_id
   AND guest.id = booking.guest_id
-  AND booking.check_out > CURRENT_DATE;`, [room]
+  AND booking.check_out > CURRENT_DATE
+  ORDER BY check_in;`, [room]
 )}
 
 
