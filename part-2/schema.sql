@@ -12,7 +12,8 @@ CREATE TABLE guest (
 CREATE TABLE room (
   id SERIAL PRIMARY KEY,
   room_number VARCHAR(2),
-  capacity INT
+  capacity INT,
+  available BOOLEAN DEFAULT true
 );
 
 CREATE TABLE booking (
