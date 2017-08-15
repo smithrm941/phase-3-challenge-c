@@ -1,15 +1,17 @@
 const guests = require('./commands/guests')
+const allRooms = require('./commands/rooms').allRooms
+const allAvailableRooms = require('./commands/rooms').allAvailableRooms
+
 
 switch(process.argv[2]){
   case 'guests':
-    //call function that lists guests
     guests()
     break;
   case 'rooms':
     if(process.argv[3] === '--available'){
-      //call function that lists available rooms
+      allAvailableRooms()
     } else {
-      //call function that lists all rooms
+      allRooms()
     }
     break;
   case 'bookings':
@@ -21,6 +23,7 @@ switch(process.argv[2]){
     break;
   default:
     console.log(`Please use the commands 'guests', 'rooms',
-    'rooms --available', or 'bookings'`)
+    'rooms --available', 'bookings', or 'bookings' followed by a 2
+    character long room number`)
     break;
 }
