@@ -1,6 +1,8 @@
 const guests = require('./commands/guests')
 const allRooms = require('./commands/rooms').allRooms
 const allAvailableRooms = require('./commands/rooms').allAvailableRooms
+const allUpcomingBookings = require('./commands/bookings').allUpcomingBookings
+const upcomingBookingsByRoom = require('./commands/bookings').upcomingBookingsByRoom
 
 
 switch(process.argv[2]){
@@ -15,10 +17,10 @@ switch(process.argv[2]){
     }
     break;
   case 'bookings':
-    if(process.argv[3].length === 2){ //all room numbers are 2 characters
-      //call function that lists upcoming bookings for specific rooms
+    if(process.argv[3] && process.argv[3].length === 2){ //all room numbers are 2 characters
+      upcomingBookingsByRoom(process.argv[3])
     } else {
-      //call function that lists all upcoming bookings
+      allUpcomingBookings()
     }
     break;
   default:
