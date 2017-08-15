@@ -5,8 +5,9 @@
   "main": "hotel.js",
   "scripts": {
     "test": "Mocha",
-    "start": "psql < schema.sql",
-    "run": "psql < load-data.sql"
+    "schema": "psql < schema.sql",
+    "load": "psql < load-data.sql",
+    "update": "psql < update-room-availability.sql"
   },
   "repository": {
     "type": "git",

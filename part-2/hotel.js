@@ -17,8 +17,8 @@ switch(process.argv[2]){
     }
     break;
   case 'bookings':
-    if(process.argv[3] && process.argv[3].length === 2){ //all room numbers are 2 characters
-      upcomingBookingsByRoom(process.argv[3])
+    if(process.argv[3] && process.argv[3].length === 2){
+      upcomingBookingsByRoom(process.argv[3].toUpperCase())
     } else {
       allUpcomingBookings()
     }

@@ -9,4 +9,4 @@ COPY room (id, room_number, capacity) FROM 'FULL/PATH/TO/rooms.csv' DELIMITER ',
 /*replace FULL/PATH/TO/bookings.csv with actual full path to bookings.csv*/
 COPY booking (id, room_id, guest_id, check_in, check_out) FROM 'FULL/PATH/TO/bookings.csv' DELIMITER ',' CSV HEADER;
 
-UPDATE room SET available = false FROM booking WHERE booking.check_in <= CURRENT_DATE  AND booking.room_id = room.id;
+UPDATE room SET available = false FROM booking WHERE booking.check_in <= CURRENT_DATE  AND booking.check_out >= CURRENT_DATE AND booking.room_id = room.id;

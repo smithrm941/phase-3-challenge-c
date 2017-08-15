@@ -1,7 +1,7 @@
 const expect = require ('chai').expect
 const query = require('../database')
 
-describe('listAllGuests', () => {
+describe(`listAllGuests: database function for 'guests' command`, () => {
   it(`should return 20 rows of data and the guest 1 should
     be Arthur Velti`, () => {
     return query.listAllGuests()
@@ -12,7 +12,7 @@ describe('listAllGuests', () => {
   })
 })
 
-describe('listAllRooms', () => {
+describe(`listAllRooms: database function for 'rooms' command`, () => {
   it(`should return 18 rows of data and room 18 should be 5B`, () => {
     return query.listAllRooms()
       .then(data => {
@@ -22,7 +22,7 @@ describe('listAllRooms', () => {
   })
 })
 
-describe('listUpcomingBookings', () => {
+describe(`listUpcomingBookings: database function for 'bookings' command`, () => {
   it(`should have the latest booking to be for room 4A and guest
     Janie Powers`, () => {
     return query.listUpcomingBookings()
@@ -33,7 +33,7 @@ describe('listUpcomingBookings', () => {
   })
 })
 
-describe('listBookingsForRoom', () => {
+describe(`listBookingsForRoom: 2nd database function for 'bookings' command`, () => {
   it(`should return 3 rows of data, and bookings should be for Randy Thys, Enos
     Semark and Janie Powers`, () => {
     return query.listBookingsForRoom('3B')
