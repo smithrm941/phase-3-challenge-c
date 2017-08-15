@@ -4,6 +4,15 @@ const db = pgp(connectionString)
 
 const listAllGuests = () => { return db.any(
   `SELECT * FROM guest`
-)} 
+)}
 
-module.exports = listAllGuests
+const listAllRooms = () => {return db.any (
+  `SELECT room_number, capacity, available FROM room ORDER BY room_number`
+)}
+
+const listAvailableRooms = () => {return db.any (
+  `SELECT room_number, capacity, available FROM room WHERE available = true ORDER BY room_number`
+)}
+
+
+module.exports = { listAllGuests, listAllRooms, listAvailableRooms }
