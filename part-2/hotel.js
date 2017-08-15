@@ -1,8 +1,9 @@
-const query = require('./database')
+const guests = require('./commands/guests')
 
 switch(process.argv[2]){
   case 'guests':
     //call function that lists guests
+    guests()
     break;
   case 'rooms':
     if(process.argv[3] === '--available'){
