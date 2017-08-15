@@ -2,15 +2,15 @@
   "name": "part-1",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "main": "hotel.js",
   "scripts": {
-    "test": "mocha",
+    "test": "Mocha",
     "start": "psql < schema.sql",
     "run": "psql < load-data.sql"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/smithrm941/phase-3-challenge-c.git"
+    "url": "https://github.com/smithrm941/phase-3-challenge-c.git"
   },
   "author": "Rhonda Smith",
   "license": "MIT",
@@ -21,6 +21,7 @@
   "dependencies": {
     "chai": "^4.1.1",
     "mocha": "^3.5.0",
+    "pg": "^7.1.2",
     "pg-promise": "^6.3.8"
   }
 }

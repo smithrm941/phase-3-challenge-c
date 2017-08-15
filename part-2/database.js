@@ -1,8 +1,8 @@
-const pgp = require('pg-promise')()
-const connectionString = 'postgres://localhost:5432/grocery_store'
-const db = pgp(connectionString)
+let pgp = require('pg-promise')()
+let connectionString = 'postgres://localhost:5432/hotel_db'
+let db = pgp(connectionString)
 
-const listAllGuests = () => { return db.any(
+const listAllGuests = () => { return db.result(
   `SELECT *
   FROM guest`
 )}
