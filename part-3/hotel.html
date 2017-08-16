@@ -69,16 +69,30 @@
 <div id="bookingModal" class="modal">
   <div class="modal-content">
     <button class="close">Close &times;</button>
-    <p>Some text in the Modal..</p>
-    <p>Some text in the Modal..</p>
-    <p>Some text in the Modal..</p>
-    <p>Some text in the Modal..</p>
-    <p>Some text in the Modal..</p>
-    <p>Some text in the Modal..</p>
-    <p>Some text in the Modal..</p>
-    <p>Some text in the Modal..</p>
-    <p>Some text in the Modal..</p>
-    <p>Some text in the Modal..</p>
+    <div class="modal-title">
+      <h1>BOOKING INFORMATION</h1>
+    <table class="booking-info">
+      <tbody>
+        <tr id="booked-room-info">
+          <td class="info-label">ROOM</td>
+          <td id="room-number">XX</td>
+          <td id="room-price">$59.99</td>
+        </tr>
+        <tr id="check-in-info">
+          <td class="info-label">Check-in</td>
+          <td><input id="check-in-date" type="date"></td>
+        </tr>
+        <tr id="nights-info">
+          <td class="info-label">Nights</td>
+          <td id="number-of-nights">Number of Nights Here</td>
+        </tr>
+        <tr id="total-info">
+          <td class="info-label">TOTAL</td>
+          <td id="total-cost">Total Cost Here</td>
+        </tr>
+      </tbody>
+    </table>
+    <button class="confirm">CONFIRM</button>
   </div>
   <script src="script.js"></script>
   </body>
