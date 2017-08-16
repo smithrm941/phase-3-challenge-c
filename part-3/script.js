@@ -1,29 +1,32 @@
-//display the modal and close it:
 const bookButtons = document.querySelectorAll('.book-button')
 const bookingInfo = document.getElementById('bookingModal')
-const closeBookingInfo = document.querySelector('.close')
-
-// temp table stuff
 const bookedRoomNumber = document.getElementById('room-number')
+const bookedRoomPrice = document.getElementById('room-price')
+const bookedTotalCost = document.getElementById('total-cost')
 
-bookButtons.forEach(function(bookButton){
+bookButtons.forEach((bookButton) =>{
   bookButton.addEventListener("click", () =>{
     let associatedRow = bookButton.parentNode.parentNode
     let associatedDataSet = associatedRow.children;
     let dataForBooking = [];
-    // console.log(associatedData)
     for (let i = 0; i < associatedDataSet.length - 1; i++) {
       let associatedDataCell = associatedDataSet[i].innerHTML;
       dataForBooking.push(associatedDataCell)
     }
-    // let associatedRoomNo = dataForBooking[0]
-    // let associatedCapacity = dataForBooking[1]
-    // let associatedPrice = dataForBooking[2]
-    // console.log(dataForBooking)
     bookedRoomNumber.innerHTML = dataForBooking[0]
+    bookedRoomPrice.innerHTML = dataForBooking[2]
+    bookedTotalCost.innerHTML = dataForBooking[2]
+
     bookingInfo.style.display = "block";
+
+    let selectedNights = document.getElementById("selectedNights")
+    selectedNights.addEventListener("change", () => {
+      bookedTotalCost.innerHTML = '$' + (selectedNights.value * dataForBooking[2].substring(1)).toFixed(2);
+    })
   })
 })
+
+const closeBookingInfo = document.querySelector('.close')
 
 closeBookingInfo.addEventListener("click", () => {
   bookingInfo.style.display = "none";
