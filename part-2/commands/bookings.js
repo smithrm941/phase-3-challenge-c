@@ -6,7 +6,7 @@ const allUpcomingBookings = () => {
   query.listUpcomingBookings()
     .then(data => {
       const booking = data
-      booking.forEach(function(booking){
+      booking.forEach((booking) => {
         let roomNumber = booking.room_number
         let name = booking.name
         let checkIn = booking.check_in.toISOString().substring(0, 10)
@@ -22,7 +22,7 @@ const upcomingBookingsByRoom = (room) => {
   query.listBookingsForRoom(room)
     .then(data => {
       const booking = data
-      booking.forEach(function(booking){
+      booking.forEach((booking) =>{
         let roomNumber = booking.room_number
         let name = booking.name
         let checkIn = booking.check_in.toISOString().substring(0, 10)

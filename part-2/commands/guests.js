@@ -6,7 +6,7 @@ const guests = () => {
   query.listAllGuests()
     .then(data => {
       const guests = data.rows
-      guests.forEach(function(guest){
+      guests.forEach((guest) =>{
         let id = guest.id
         let name = guest.name
         let email = guest.email

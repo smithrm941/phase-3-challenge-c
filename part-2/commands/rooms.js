@@ -6,7 +6,7 @@ const allRooms = () => {
   query.listAllRooms()
     .then(data => {
       const rooms = data
-      rooms.forEach(function(room){
+      rooms.forEach((room) =>{
         let roomNumber = room.room_number
         let capacity = room.capacity
         let available = room.available
@@ -21,7 +21,7 @@ const allAvailableRooms = () => {
   query.listAvailableRooms()
     .then(data => {
       const rooms = data
-      rooms.forEach(function(room){
+      rooms.forEach((room) =>{
         let roomNumber = room.room_number
         let capacity = room.capacity
         let available = room.available
