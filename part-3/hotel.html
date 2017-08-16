@@ -71,6 +71,7 @@
     <button class="close">Close &times;</button>
     <div class="modal-title">
       <h1>BOOKING INFORMATION</h1>
+  <form>
     <table class="booking-info">
       <tbody>
         <tr id="booked-room-info">
@@ -84,7 +85,20 @@
         </tr>
         <tr id="nights-info">
           <td class="info-label">Nights</td>
-          <td id="number-of-nights">Number of Nights Here</td>
+          <td id="number-of-nights">
+            <select>
+              <option name="1night" value="1">1</option>
+              <option name="2night" value="2">2</option>
+              <option name="3night" value="3">3</option>
+              <option name="4night" value="4">4</option>
+              <option name="5night" value="5">5</option>
+              <option name="6night" value="6">6</option>
+              <option name="7night" value="7">7</option>
+              <option name="8night" value="8">8</option>
+              <option name="9night" value="9">9</option>
+              <option name="10night" value="10">10</option>
+            </select>
+          </td>
         </tr>
         <tr id="total-info">
           <td class="info-label">TOTAL</td>
@@ -92,6 +106,7 @@
         </tr>
       </tbody>
     </table>
+  </form>
     <button class="confirm">CONFIRM</button>
   </div>
   <script src="script.js"></script>
